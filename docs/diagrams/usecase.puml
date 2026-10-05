@@ -1,0 +1,47 @@
+@startuml
+
+left to right direction
+
+skinparam packageStyle rectangle
+
+actor "Администратор" as Admin
+actor "Мастер" as Master
+
+rectangle "Информационная система\n«Учёт заявок в ремонтную мастерскую»" {
+
+    usecase "Добавить клиента" as UC1
+    usecase "Создать заявку" as UC2
+    usecase "Просмотреть заявки" as UC3
+    usecase "Найти заявку" as UC4
+    usecase "Изменить заявку" as UC5
+    usecase "Назначить мастера" as UC6
+    usecase "Изменить статус заявки" as UC7
+    usecase "Просмотреть завершённые заявки" as UC8
+
+    usecase "Просмотреть назначенные заявки" as UC9
+    usecase "Просмотреть информацию о заявке" as UC10
+    usecase "Провести диагностику" as UC11
+    usecase "Добавить результаты диагностики" as UC12
+    usecase "Указать выполненные работы" as UC13
+    usecase "Указать стоимость ремонта" as UC14
+    usecase "Завершить заявку" as UC15
+}
+
+Admin --> UC1
+Admin --> UC2
+Admin --> UC3
+Admin --> UC4
+Admin --> UC5
+Admin --> UC6
+Admin --> UC7
+Admin --> UC8
+
+Master --> UC9
+Master --> UC10
+Master --> UC11
+Master --> UC12
+Master --> UC13
+Master --> UC14
+Master --> UC15
+
+@enduml
